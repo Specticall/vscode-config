@@ -1,0 +1,290 @@
+/* Block 3: Hide the ">" chevron icon */
+.codicon-tree-item-expanded:before {
+  display: none !important;
+}
+
+/* Block 4: List item label name */
+/*
+ .monaco-list.list_id_1 .monaco-list-row.selected .label-name {
+  color: #fff !important;
+  opacity: 1 !important;
+ }
+ */
+
+/* Block 5: File explorer action buttons */
+
+.monaco-workbench .part.sidebar .title-actions .actions-container {
+  display: none;
+}
+
+/* Block 6: File Explorer Item Label */
+
+.monaco-tree .monaco-tree-row .label-name,
+.monaco-list .monaco-list-row .monaco-icon-label .label-name {
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 11px !important;
+}
+
+/* Block 7: Explorer item edited */
+.explorer-item-edited {
+  font-family: "JetBrains Mono" !important;
+  font-size: 11px !important;
+}
+
+/* Block 9: Sidebar title */
+/*
+.composite.title {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-items: center !important;
+} */
+.composite.title h2 {
+  font-size: 11px !important;
+  text-transform: uppercase;
+  font-family: "JetBrains Mono" !important;
+  /* color: #bc9abc !important; */
+}
+
+/* Block 10: Scroll Bar */
+
+/* .slider {
+  position: absolute !important;
+  right: 1px !important;
+  width: 1px !important;
+  left: auto !important;
+} */
+
+/* Block 13: Project title's style at the top */
+
+.monaco-workbench
+  .part.titlebar
+  > .titlebar-container
+  > .titlebar-center
+  > .window-title
+  > .command-center
+  .action-item.command-center-center {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Block 14: Project Title */
+
+.titlebar-left {
+  justify-content: flex-end !important;
+  flex-grow: 0 !important;
+  width: 75px !important;
+}
+
+/* Block 15: Search Label */
+.search-label {
+  font-family: "JetBrains Mono" !important;
+  font-size: 12px !important;
+  display: block;
+}
+
+/* Block 16: Search icon */
+
+.search-icon {
+  display: none !important;
+}
+
+/* Block 17: Codicon search pseudo-element */
+.codicon-search::before {
+  display: none !important;
+}
+
+/* Block 18: Arrow icons */
+.codicon-arrow-right,
+.codicon-arrow-left {
+  display: none !important;
+}
+
+/* Block 19: Titlebar right group */
+.titlebar-right > * {
+  display: none !important;
+}
+
+/* Block 20: Command center center */
+
+/* Block 21: Command Palette */
+
+.quick-input-widget {
+  border: 1px solid var(--vscode-textSeparator-foreground) !important;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+/* Block 23: Remove background for lists */
+.monaco-list-rows {
+  background: transparent !important;
+}
+
+/* Block 24: Command palette text input */
+
+.quick-input-filter .monaco-inputbox {
+  padding-block: 0.375rem !important;
+  padding-inline: 0.5rem !important;
+  font-family: "JetBrains Mono" !important;
+  font-size: 11px !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* Block 25: Command blur overlay */
+#command-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(8px);
+}
+
+.interactive-result-code-block .monaco-editor .view-line {
+  height: 14px !important;
+}
+/* Block 27: Quick input header alignment */
+/*
+ .quick-input-header {
+  align-items: center;
+ }
+ */
+
+/* Block 29: Editor group watermark */
+
+.editor-group-watermark {
+  max-width: none !important;
+}
+
+/* Action bar copilot icon  */
+.codicon-copilot {
+  display: none !important;
+}
+
+/* Action bar main text alignment */
+.monaco-action-bar .action-item {
+  justify-content: start !important;
+}
+
+/* Action bar */
+.monaco-action-bar .action-label.codicon-chevron-down {
+  display: none !important;
+}
+
+/* Action bar text position */
+.monaco-action-bar .actions-container {
+  padding: 0 !important;
+}
+.monaco-action-bar .action-item.command-center-center {
+  margin: 0 !important;
+}
+.titlebar-center {
+  margin: 0 !important;
+}
+
+/* "CTRL + F" bar setting */
+.editor-widget.find-widget .input,
+.editor-widget.find-widget .matchesCount {
+  font-family: "JetBrains Mono NL" !important;
+  font-size: 11px !important;
+}
+
+/* Copilot markdown styles */
+.rendered-markdown {
+  font-family: "JetBrains Mono" !important;
+  /* font-size: 11px !important; */
+}
+/* .interactive-result-code-block .mtk1 {
+  font-size: 11px !important;
+} */
+
+/* Terminal styles */
+.terminal-split-pane * {
+  font-size: 10px !important;
+}
+/* Terminal options indicator */
+.monaco-workbench .pane-composite-part > .title > .composite-bar-container {
+  display: none !important;
+}
+.codicon-toolbar-more[aria-label="Views and More Actions..."] {
+  display: none !important;
+}
+.codicon-split-horizontal[aria-label="Split Terminal (Ctrl+Shift+5)"] {
+  display: none !important;
+}
+.codicon-panel-maximize {
+  display: none !important;
+}
+.monaco-select-box[aria-label="Open Terminals."] {
+  font-family: "JetBrains Mono" !important;
+  font-size: 11px !important;
+  padding-block: 0.25rem !important;
+  border: 1px solid var(--vscode-textSeparator-foreground) !important;
+}
+.menu-entry {
+  margin: 0 !important;
+}
+.codicon-chat-sparkle {
+  display: none !important;
+}
+
+/* Scope to Copilot Chat webview (aria-label may vary slightly by version) */
+body.webview[aria-label="Copilot Chat"],
+body[aria-label="Copilot Chat"] {
+  --vscode-editor-font-size: 11px;
+}
+
+body.webview[aria-label="Copilot Chat"] .interactive-result,
+body.webview[aria-label="Copilot Chat"] .interactive-result .markdown,
+body.webview[aria-label="Copilot Chat"] .interactive-result .markdown * {
+  font-size: 11px !important;
+  line-height: 14px !important;
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+body.webview[aria-label="Copilot Chat"] textarea,
+body.webview[aria-label="Copilot Chat"] .input-area,
+body.webview[aria-label="Copilot Chat"] .chat-input,
+body.webview[aria-label="Copilot Chat"] .chat-input * {
+  font-size: 11px !important;
+  line-height: 14px !important;
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+body.webview[aria-label="Copilot Chat"]
+  .interactive-result-code-block
+  .monaco-editor,
+body.webview[aria-label="Copilot Chat"]
+  .interactive-result-code-block
+  .monaco-editor
+  .view-lines,
+body.webview[aria-label="Copilot Chat"]
+  .interactive-result-code-block
+  .monaco-editor
+  .margin,
+body.webview[aria-label="Copilot Chat"]
+  .interactive-result-code-block
+  .monaco-editor
+  .line-numbers,
+body.webview[aria-label="Copilot Chat"]
+  .interactive-result-code-block
+  .monaco-editor
+  .mtk1 {
+  font-size: 11px !important;
+  line-height: 14px !important; /* maintain highlight alignment */
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+body.webview[aria-label="Copilot Chat"]
+  .interactive-result-code-block
+  .monaco-editor
+  .view-line {
+  height: 14px !important;
+}
+
+body.webview[aria-label="Copilot Chat"] .interactive-result-code-block pre,
+body.webview[aria-label="Copilot Chat"] .interactive-result-code-block code {
+  font-size: 11px !important;
+  line-height: 14px !important;
+}
