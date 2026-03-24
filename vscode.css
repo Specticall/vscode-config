@@ -1,3 +1,17 @@
+/* Block 1: Global UI Font (excluding editor) */
+.monaco-workbench {
+  /* Change "Segoe UI" to your desired font */
+  /* font-family: "Segoe UI", sans-serif !important; */
+  --ui-font-size: 11px; /* Set your global font size here */
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: var(--ui-font-size) !important;
+}
+
+/* Block 2: Prevent UI font from affecting editor */
+.monaco-editor {
+  font-family: var(--monaco-monospace-font) !important;
+}
+
 /* Block 3: Hide the ">" chevron icon */
 .codicon-tree-item-expanded:before {
   display: none !important;
@@ -22,7 +36,7 @@
 .monaco-tree .monaco-tree-row .label-name,
 .monaco-list .monaco-list-row .monaco-icon-label .label-name {
   font-family: "JetBrains Mono", monospace !important;
-  font-size: 11px !important;
+  font-size: 11px !important; /* Custom size for explorer only */
 }
 
 /* Block 7: Explorer item edited */
@@ -40,7 +54,7 @@
   justify-items: center !important;
 } */
 .composite.title h2 {
-  font-size: 11px !important;
+  font-size: var(--ui-font-size) !important;
   text-transform: uppercase;
   font-family: "JetBrains Mono" !important;
   /* color: #bc9abc !important; */
@@ -126,7 +140,7 @@
   padding-block: 0.375rem !important;
   padding-inline: 0.5rem !important;
   font-family: "JetBrains Mono" !important;
-  font-size: 11px !important;
+  font-size: var(--ui-font-size) !important;
   margin-bottom: 0.25rem !important;
 }
 
@@ -287,4 +301,60 @@ body.webview[aria-label="Copilot Chat"] .interactive-result-code-block pre,
 body.webview[aria-label="Copilot Chat"] .interactive-result-code-block code {
   font-size: 11px !important;
   line-height: 14px !important;
+}
+
+.agent-status-badge {
+  display: none !important;
+}
+
+/* Block 30: Menus and Dropdowns (File, Edit, Context Menus) */
+.monaco-menu .monaco-action-bar.vertical .action-label,
+.monaco-menu .monaco-action-bar.vertical .keybinding,
+.monaco-workbench .menubar .menubar-menu-button .menubar-menu-title {
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 11px;
+  font-size: var(--ui-font-size) !important;
+}
+
+/* Block 31: Tree Row Layout & Spacing */
+/* Note: Changing 'height' directly breaks the list layout due to absolute positioning */
+/* This improves vertical centering */
+.monaco-list-row {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.monaco-tree-row .label-name,
+.monaco-list-row .monaco-icon-label .label-name {
+  line-height: normal !important;
+  padding-bottom: 8px !important; /* Slight vertical adjustment */
+}
+
+.menubar:not(.compact)
+  .menubar-menu-button:first-child
+  .toolbar-toggle-more:before,
+.menubar.compact .toolbar-toggle-more:before {
+  font-size: 16px;
+}
+
+/* Block 25: Command blur overlay */
+#command-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15); /* Darken the background slightly */
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(8px); /* This applies the actual blur effect */
+  z-index: 100;
+}
+
+.quick-input-widget {
+  transform: translateY(-50%) !important;
+  top: 50% !important;
+  z-index: 150;
+  border: solid 2px #ffffff2d !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.45) !important;
 }
